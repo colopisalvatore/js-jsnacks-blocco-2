@@ -22,7 +22,8 @@ const btn1 = function () {
     number.value = '';
 
 }
-// button1.addEventListener('click', btn1);
+if (button1) {button1.addEventListener('click', btn1);} 
+
 
 // FINE SNACK 1
 
@@ -41,17 +42,18 @@ const btn2 = function () {
 
     for (let i = 0; i < nameList.length && i < lastNameList.length; i++) {
         let randomName = Math.floor(Math.random() * nameListCopy.length);
+        // console.log('randomName', randomName)
         let randomLastName = Math.floor(Math.random() * lastNameListCopy.length);
+        // console.log('randomLastName', randomLastName)
         const liElement = document.createElement('li');
         result2.append(liElement);
+        // console.log('result2', result2)
         liElement.innerHTML += (nameListCopy[randomName] + ' ' + lastNameListCopy[randomLastName])
         nameListCopy.splice(randomName, 1);
         lastNameListCopy.splice(randomLastName, 1);
-
         }
-
 }
-// button2.addEventListener('click', btn2);
+if (button2) {button2.addEventListener('click', btn2);}
 
 
 // FINE SNACK 2
@@ -73,22 +75,24 @@ const btn3 = function () {
     }
     result3.innerHTML = 'La somma di tutti i numeri dispari è:' + ' ' + odd;
 }
-button3.addEventListener('click', btn3);
+if (button3) {button3.addEventListener('click', btn3);}
 // FINE SNACK 3
 
 
 
 // ATTIVA IL BOTTONE PER ANDARE ALL'ESERCIZIO SUCCESSIVO
-// const btn = document.querySelector('#btn1', '#btn2', '#btn3');
+const btn = document.querySelector('#btn1', '#btn2', '#btn3');
 
-// btn.addEventListener('click', () => {
-//     const button = document.getElementById('next');
+if (btn) {
+    btn.addEventListener('click', () => {
+    const button = document.querySelector('#next');
 
-//     if (button.style.display === 'none') {
-//         // 👇️ Facciamo comparire il bottone
-//         button.style.display = 'block';
-//     } else {
-//         // 👇️ Nascondiamolo
-//         button.style.display = 'none';
-//     }
-// });
+    if (button.style.display === 'none') {
+        // 👇️ Facciamo comparire il bottone
+        button.style.display = 'block';
+    } else {
+        // 👇️ Nascondiamolo
+        button.style.display = 'none';
+    }
+});
+}
