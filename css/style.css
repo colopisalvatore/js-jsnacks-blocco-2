@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    background-color: #242629;
+    font-family: 'Kanit', sans-serif;
+}
+.card{
+     width: 90%;
+     max-width: 400px;
+     padding: 5rem 2.5rem;
+
+     text-align: justify;
+     color: #94a1b2;
+     
+     border-radius:  1rem;
+     border: 1px solid transparent;
+
+     backdrop-filter: blur(1rem);
+     box-shadow: 1rem 1rem 1.3rem #7f5af0;
+
+    border-top: 1px solid rgba(127, 90, 240, 0.5);
+    border-bottom: 1px solid rgba(127, 90, 240, 0.1);
+    border-left: 1px solid rgba(127, 90, 240, 0.5);
+    border-right: 1px solid rgba(127, 90, 240, 0.1);
+}
+.cb1{
+    background-color: #16161a;
+}
+.cb2{
+    background-color: #fffffe;
+    color: #16161a;
+}
+.card-title {
+    font-size: 2rem;
+}
+h2>a{
+    color: #7f5af0;
+}
+.card-number{    
+    color: #7f5af0;
+    font-size: 4.5rem;
+    z-index: -1;
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+}
+.card:hover{
+
+}
+
+#next{
+    display: none;
+}
+.btn:hover{
+    box-shadow: 0 0.3rem 1rem rgba(127, 90, 240, 0.5);
+}
