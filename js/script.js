@@ -54,8 +54,6 @@ const btn2 = function () {
         }
 }
 if (button2) {button2.addEventListener('click', btn2);}
-
-
 // FINE SNACK 2
 
 // SNACK 3
@@ -78,10 +76,39 @@ const btn3 = function () {
 if (button3) {button3.addEventListener('click', btn3);}
 // FINE SNACK 3
 
+// SNACK 4
+const button4 = document.querySelector('#btn4');
+
+const frutta = ['mela', 'banana', 'pesca', 'arancia', 'kiwi'];
+const topping = ['cioccolato', 'fragola', 'lampone'];
+
+const btn4 = function () {
+    const result4 = document.querySelector('#result4')
+    result4.innerHTML = '';
+
+    if (frutta.length > topping.length){
+        const elementiDaAgg = frutta.length - topping.length;
+        console.log('elementiDaAgg', elementiDaAgg);
+        for(let i = 0; i < elementiDaAgg; i++){
+            topping.push(i);
+        }
+        console.log('topping', topping);
+    } else if (topping.length > frutta.length) {
+        const elementiDaAgg = topping.length - frutta.length;
+    } else {
+        console.log('sono uguali');
+}
+}
+
+
+
+if (button4) { button4.addEventListener('click', btn4); }
+
+
 
 
 // ATTIVA IL BOTTONE PER ANDARE ALL'ESERCIZIO SUCCESSIVO
-const btn = document.querySelector('#btn1', '#btn2', '#btn3');
+const btn = document.querySelector('.next');
 
 if (btn) {
     btn.addEventListener('click', () => {

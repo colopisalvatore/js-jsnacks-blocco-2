@@ -39,6 +39,9 @@ body{
     font-size: 2rem;
 }
 h2>a{
+    color: #fff;
+}
+h2>a:hover{
     color: #7f5af0;
 }
 .card-number{    
